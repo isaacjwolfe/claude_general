@@ -91,6 +91,21 @@
 | **Video** | Runway, Google Veo, Kling | Launch and reveal clips. |
 | **Commerce** | Shopify (already in use, it appears) | Keep it. Wire concepts, votes, and pre-orders into Club Shops. |
 
+### The specific answer: customer AI mockups, then designers refine with AI
+
+**The key is that the customer and the designer work on the same layered design, not on a flat AI image.** A layered design means a kit template with separate zones: base color, pattern, collar, crest, and type. The customer's AI picks fill those zones. The designer opens the same file and keeps going. If the customer's mockup is just a JPG from a generic generator (Design Jersey AI and the like), the designer has to redraw it from scratch, and much of the benefit is lost.
+
+| Who | Tool | Why |
+|---|---|---|
+| **Customer: on the site** | **Zakeke** (Shopify app: 2D/3D customizer, AI features, print-ready output) as the 3D kit shell | Icarus already runs Shopify. Reviewers in sporting goods praise its 3D view and print-ready files. Watch-outs: its built-in AI is mainly product visuals, mobile UX gets mixed reviews, and team ordering (sizes and names) may need its own flow. |
+| **Customer: generation engine** | **Recraft API**: build a custom style from Icarus reference kits, use exact brand colors, output vector and seamless patterns | Output stays **editable and printable**, and in the Icarus style. This is a custom integration into the configurator, not a checkbox. |
+| **Customer: "see it on a player" image** | **GPT Image** or **FLUX** (most accurate edits); **Nano Banana** (Gemini) for cheap volume | Photoreal hero shots to share in the group chat. These are marketing images only, never the production file. |
+| **Designer: refine** | **Adobe Illustrator + Firefly** (Generative Recolor for instant colorways, Firefly with IP indemnity on enterprise plans) | It's almost certainly what they already use. AI goes into the tool they already work in. |
+| **Designer: explore and clean up** | **Recraft web app**: same custom style as the customer side; pattern variations; vectorizing low-res crests; mockups | One style shared on both sides, so customer concepts and designer output look like the same brand. |
+| **Designer: quick client edits** | **GPT Image / Nano Banana** for conversational tweaks on presentation mockups ("thinner sash, gold trim") | Fast responses between design rounds. |
+
+**Start without building anything:** Designers adopt Recraft and Firefly-in-Illustrator **now**. After intake, a designer sends 3 AI-assisted concepts within 24 hours. That tests whether customers respond before money goes into an on-site tool. Then add Zakeke plus the Recraft API to the site. Run a bake-off on 20 real past orders before committing, because image models change every few months.
+
 **Architecture principle:** Don't let AI produce the final art freely. Use a structured design space. The LLM picks a base template, collar, pattern family, palette, and motif, and the generator fills **pattern zones only** on a real template. That way every concept is **manufacturable**, which is exactly the problem owayo warns about, and designers can take it over in their normal tools.
 
 ---
